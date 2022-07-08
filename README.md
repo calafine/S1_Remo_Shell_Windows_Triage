@@ -1,6 +1,6 @@
 # Windows_Triage
 
-# System Information
+## System Information
 
 ```powershell
 echo %DATE% %TIME%
@@ -18,4 +18,24 @@ wmic computersystem list brief
 wmic product get name,version
 
 echo %PATH%
+```
+## User Information
+```powershell
+whoami
+
+net users
+
+net localgroup administrators
+
+net group administrators
+
+wmic rdtoggle list
+
+wmic group list
+
+wmic netlogin get name,lastlogon,badpasswordcount
+
+wmic netclient list brief
+
+doskey /history > history.txt
 ```
