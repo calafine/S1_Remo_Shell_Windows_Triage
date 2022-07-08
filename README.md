@@ -1,5 +1,9 @@
 # S1_Remo_Shell_Windows_Triage
 
+## Notes
+
+most commands are powershell and will run as is, some however are cmd.exe commands and you will need to drop into cmd.exe, or append the call to cmd.exe before the command. (cmd.exe /c "#the_command_here")
+
 ## System Information
 
 ```powershell
