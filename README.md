@@ -13,28 +13,33 @@ Gets system Date and Time
 ```powershell
 echo %DATE% %TIME%
 ```
+
 ```powershell
 hostname
 ```
+
 ```powershell
 systeminfo
 ```
+
 ```powershell
 systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
 ```
+
 ```powershell
 wmic csproduct get name
 ```
+
 ```powershell
-```
 wmic computersystem list brief
-```powershell
 ```
+```powershell
 wmic product get name,version
-```powershell
 ```
+```powershell
 echo %PATH%
 ```
+
 ## User Information
 ```powershell
 whoami
