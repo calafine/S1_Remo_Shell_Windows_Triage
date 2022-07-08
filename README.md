@@ -9,55 +9,64 @@ Some commands output is easier to read by writing to a file and pulling the file
 ## System Information
 
 Gets system Date and Time
-
 ```powershell
 echo %DATE% %TIME%
 ```
-
+Gets hostname
 ```powershell
 hostname
 ```
-
+Gathers some system info
 ```powershell
 systeminfo
 ```
-
+Gets logon server
 ```powershell
-systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+systeminfo | findstr "Logon Server"
 ```
-
+Grabs domain logon server OS info
 ```powershell
-wmic csproduct get name
+systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"Domain" /C:"Logon Server"
 ```
-
+Grabs "Domain     Manufacturer         Model                Name             PrimaryOwnerName      TotalPhysicalMemory" 
 ```powershell
 wmic computersystem list brief
 ```
+Lists installed products and their version
 ```powershell
 wmic product get name,version
 ```
+
 ```powershell
-echo %PATH%
+cmd.exe /c "echo %PATH%"
 ```
 
 ## User Information
 ```powershell
 whoami
-
+```
+```powershell
 net users
-
+```
+```powershell
 net localgroup administrators
-
+```
+```powershell
 net group administrators
-
+```
+```powershell
 wmic rdtoggle list
-
+```
+```powershell
 wmic group list
-
+```
+```powershell
 wmic netlogin get name,lastlogon,badpasswordcount
-
+```
+```powershell
 wmic netclient list brief
-
+```
+```powershell
 doskey /history > history.txt
 ```
 
@@ -65,17 +74,22 @@ doskey /history > history.txt
 
 ```powershell
 netstat -e
-
+```
+```powershell
 netstat -boan
-
+```
+```powershell
 netstat -rn
-
+```
+```powershell
 netstat -vb
-
+```
+```powershell
 nbtstat -S
-
+```
+```powershell
 route print
-
+```
 arp -a
 
 ipconfig /displaydns
