@@ -8,21 +8,31 @@ Some commands output is easier to read by writing to a file and pulling the file
 
 ## System Information
 
+Gets system Date and Time
+
 ```powershell
 echo %DATE% %TIME%
-
+```
+```powershell
 hostname
-
+```
+```powershell
 systeminfo
-
+```
+```powershell
 systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
-
+```
+```powershell
 wmic csproduct get name
-
+```
+```powershell
+```
 wmic computersystem list brief
-
+```powershell
+```
 wmic product get name,version
-
+```powershell
+```
 echo %PATH%
 ```
 ## User Information
