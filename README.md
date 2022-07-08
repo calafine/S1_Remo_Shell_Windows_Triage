@@ -2,7 +2,7 @@
 
 # System Information
 
-## echo %DATE% %TIME%
+#### echo %DATE% %TIME%
 hostname
 systeminfo
 systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
