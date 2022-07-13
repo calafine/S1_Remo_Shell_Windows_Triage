@@ -36,7 +36,7 @@ Lists installed products and their version
 ```powershell
 wmic product get name,version
 ```
-
+Lists current paths in scope
 ```powershell
 cmd.exe /c "echo %PATH%"
 ```
