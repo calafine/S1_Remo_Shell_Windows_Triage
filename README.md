@@ -124,3 +124,102 @@ wmic nicconfig get descriptions,IPaddress,MACaddress
 ```powershell
 wmic netuse get name,username,connectiontype,localname
 ```
+
+## Services / Schtasks
+
+```powershell
+schtasks
+```
+
+```powershell
+tasklist
+```
+```powershell
+tasklist /svc
+```
+```powershell
+tasklist /svc /fi "imagename eq svchost.exe"
+```
+```powershell
+tasklist /svc /fi "pid eq <PID>"
+```
+```powershell
+net start
+```
+```powershell
+sc query
+```
+```powershell
+wmic service list breif | findstr "Running"
+```
+```powershell
+wmic service list config
+```
+```powershell
+wmic process list brief
+```
+```powershell
+wmic service list status
+```
+```powershell
+wmic service list memory
+```
+```powershell
+wmic job list brief
+```
+```powershell
+Get-Service | where-Object { $_.Status -ep "running" }
+```
+```powershell
+Get-Process | select modules | foreach-Object{$_.modules}
+```
+## Policy Patch Settings info
+```powershell
+cmd.exe /c "set"
+```
+```powershell
+gpresult /r
+```
+```powershell
+wmic qfe
+```
+## Autoruns / Autoloads
+```powershell
+wmic startup list full
+```
+```powershell
+wmic startup list brief
+```
+```powershell
+# need to drop into cmd.exe
+dir "%SystemDrive%\Microsoft\Windows\Start Menu\Programs\StartUp"
+```
+```powershell
+# need to drop into cmd.exe
+dir "%SystemDrive%\Documents and Settings\All Users\Start Menu\Programs\Startup"
+```
+```powershell
+# need to drop into cmd.exe
+dir "%userprofile%\Start Menu\Programs\Startup"
+```
+```powershell
+dir "C:\Windows\Start Menu\Programs\Startup"
+```
+```powershell
+
+```
+```powershell
+
+```
+```powershell
+
+```
+```powershell
+
+```
+```powershell
+
+```
+```powershell
+
+```
