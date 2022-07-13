@@ -51,12 +51,15 @@ net users
 ```powershell
 net localgroup administrators
 ```
+Only works on domain controllers
 ```powershell
 net group administrators
 ```
+check rdp
 ```powershell
 wmic rdtoggle list
 ```
+List groups
 ```powershell
 wmic group list
 ```
@@ -66,18 +69,22 @@ wmic netlogin get name,lastlogon,badpasswordcount
 ```powershell
 wmic netclient list brief
 ```
+may not work unless history is turned on, or may have to figure out how to specify users
 ```powershell
 doskey /history > history.txt
 ```
 
 ## Network Information - Open Connections etc
 
+Gets total bytes sent and recieved
 ```powershell
 netstat -e
 ```
+gets all active connections, their status and pid.
 ```powershell
 netstat -boan
 ```
+gets routing information
 ```powershell
 netstat -rn
 ```
@@ -90,21 +97,30 @@ nbtstat -S
 ```powershell
 route print
 ```
+```powershell
 arp -a
-
+```
+```powershell
 ipconfig /displaydns
-
+```
+```powershell
 netsh winhttp show proxy
-
+```
+```powershell
 ipconfig /allcompartments /all
-
+```
+```powershell
 netsh wlan show interfaces
-
+```
+```powershell
 netsh wlan show all
-
+```
+```powershell
 type %SYSTEMROOT%\system32\drivers\etc\hosts
-
+```
+```powershell
 wmic nicconfig get descriptions,IPaddress,MACaddress
-
+```
+```powershell
 wmic netuse get name,username,connectiontype,localname
 ```
